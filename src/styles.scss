@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+// /* You can add global styles to this file, and also import other style files */
+
+// body ,html{min-height: 100%;  }
+// body {
+        
+//         font-family: Roboto, "Helvetica Neue", sans-serif;   
+//         border: dotted black;
+//         display: flex;
+//         justify-content: center;
+// }
+html { background-color: white; } 
+body {
+    min-height: 100vh;
+    max-width: 800px;
+    background-color:white; 
+    margin: 0 auto;
+    border-radius: 4px;
+    
+
+}
