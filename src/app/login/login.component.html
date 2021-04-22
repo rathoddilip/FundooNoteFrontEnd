@@ -25,6 +25,9 @@
             <mat-label >Username</mat-label>
             <input matInput placeholder="" formControlName="email">
             <span class="input-suffix" matSuffix >@gmail.com</span>
+            <mat-error *ngIf="loginForm.hasError('required', 'email')">
+              *Required
+            </mat-error>
             <mat-hint>You can use letters, numbers & periods</mat-hint>
           </mat-form-field>
         </div>
@@ -32,6 +35,9 @@
           <mat-form-field class="pass" appearance="outline">
             <mat-label >Password</mat-label>
             <input type="password" id="password" type="{{ isActive ? 'password' : 'text' }}" matInput placeholder="" formControlName="password">
+            <mat-error *ngIf="loginForm.hasError('required', 'password')">
+              Please enter your password
+            </mat-error>
             <mat-hint class="pass-hint"  >Use 8 or more characters with a mix of letters, numbers at least 1 uppercase, 1 digit & 1 symbol
             </mat-hint>
           </mat-form-field>          
@@ -45,12 +51,12 @@
    
         <div class="btns">
           <div class="create">
-            <a [routerLink]="['/signup']" >
+            <a [routerLink]="['/register']" >
             Create account
             </a>
           </div>
           <div class="forget">
-            <a [routerLink]="['/ForgetPassword']" >
+            <a [routerLink]="['/forgotpassword']" >
             Forgot password?
             </a>
           </div>
